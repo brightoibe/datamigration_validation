@@ -199,14 +199,14 @@ public class CohortMaster {
 		PatientService patientService = Context.getPatientService();
 		List<Patient> patientList = patientService.getAllPatients();
 		List<Encounter> encounterList = null;
-		for (Patient patient : patientList) {
+		/*for (Patient patient : patientList) {
 			encounterList = encounterService.getEncountersByPatient(patient);
 			for (Encounter enc : encounterList) {
 				if (enc != null && enc.getForm() != null && enc.getForm().getFormId() == 23) {
 					patientSet.add(patient.getPatientId());
 				}
 			}
-		}
+		}*/
 		//List<Encounter> encounterList=encounterService.getEncountersByPatient(ptnt)
 		return patientSet;
 	}
