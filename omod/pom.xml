@@ -15,7 +15,7 @@
 	<dependencies>
         <dependency>
             <groupId>org.openmrs.module</groupId>
-            <artifactId>datamigration-api</artifactId>
+            <artifactId>dataquality-api</artifactId>
             <version>1.0.0-SNAPSHOT</version>
         </dependency>
 		<dependency>

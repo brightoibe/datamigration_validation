@@ -74,10 +74,23 @@ public class UsersFragmentController {
                 //Started ART Last 6 Months documented Gender
                 numerator=cohortMaster.countCohort(CohortMaster.STARTED_ART_LAST_6MONTHS_DOCUMENTED_SEX);
                 denominator=cohortMaster.countCohort(CohortMaster.STARTED_ART_LAST_6MONTHS_COHORT);
-                map.put("startedartlast6monthscount",(int)denominator);
+                //map.put("startedartlast6monthscount",(int)denominator);
                 map.put("startedartlast6monthscountdocumentedsex",(int)numerator);
                 map.put("percentagestartedartlast6monthswithdocumentedsex",(int)cohortMaster.getPercentage(numerator,denominator));
                 
+                //Started ART Last 6 Months with Documented Date Confirmed Positive
+                numerator=cohortMaster.countCohort(CohortMaster.STARTED_ART_LAST_6MONTHS_DOCUMENTED_DATECONFIRMED_POSITIVE);
+                denominator=cohortMaster.countCohort(CohortMaster.STARTED_ART_LAST_6MONTHS_COHORT);
+                //map.put("startedartlast6monthscount",(int)denominator);
+                map.put("startedartlast6monthscountdocumenteddateconfirmedpositive",(int)numerator);
+                map.put("percentagestartedartlast6monthswithdocumenteddateconfirmedpositive",(int)cohortMaster.getPercentage(numerator,denominator));
+                
+                //Started ART Last 6 Months with Documented Enrollement Date
+                numerator=cohortMaster.countCohort(CohortMaster.STARTED_ART_LAST_6MONTHS_DOCUMENTED_HIVENROLLMENT);
+                denominator=cohortMaster.countCohort(CohortMaster.STARTED_ART_LAST_6MONTHS_COHORT);
+                //map.put("startedartlast6monthscount",(int)denominator);
+                map.put("startedartlast6monthscountdocumentedenrollmentdate",(int)numerator);
+                map.put("percentagestartedartlast6monthswithdocumenteddateenrollmentdate",(int)cohortMaster.getPercentage(numerator,denominator));
                 
                 
                 SummaryDashboard summaryDashboard = summaryDashboardList.stream().filter(x->x.getEncounterTypeID().equals(11)).findFirst().orElse(null);

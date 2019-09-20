@@ -174,16 +174,23 @@
             </tr>
             <tr>
                 <td>Proportion of patients newly started on ART in the last 6 months with registered address/LGA of residence </td>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td>0</td>
+                <td>0</td>
+                <td>0%</td>
                 <td><a href=''>Download</a></td>
             </tr>
             <tr>
                 <td>Proportion of patients newly started on ART in the last 6 months with documented date of HIV diagnosis</td>
-                <td></td>
+                <td>${ui.format(startedartlast6monthscountdocumenteddateconfirmedpositive)}</td>
                 <td>${ui.format(startedartlast6monthscount)}</td>
-                <td></td>
+                <td>${ui.format(percentagestartedartlast6monthswithdocumenteddateconfirmedpositive)}</td>
+                <td><a href=''>Download</a></td>
+            </tr>
+            <tr>
+                <td>Proportion of patients newly started on ART in the last 6 months with documented HIV enrollment date</td>
+                <td>${ui.format(startedartlast6monthscountdocumentedenrollmentdate)}</td>
+                <td>${ui.format(startedartlast6monthscount)}</td>
+                <td>${ui.format(percentagestartedartlast6monthswithdocumenteddateenrollmentdate)}</td>
                 <td><a href=''>Download</a></td>
             </tr>
             
