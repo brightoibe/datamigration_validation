@@ -193,7 +193,17 @@ public class CohortMaster {
 	
 	public Set<Integer> buildCohortByEnrollment(int programID) {
 		Set<Integer> patientSet = new HashSet<Integer>();
-		
+		EncounterService encounterService = Context.getEncounterService();
+		PatientService patientService = Context.getPatientService();
+		List<Patient> patientList = patientService.getAllPatients();
+		List<Encounter> encounterList = null;
+		for (Patient patient : patientList) {
+			encounterList = encounterService.getEncountersByPatient(patient);
+			//for(Encounter enc: encounterList){
+			//if(enc.getForm().getFormId()==)
+			//}
+		}
+		//List<Encounter> encounterList=encounterService.getEncountersByPatient(ptnt)
 		return patientSet;
 	}
 	
