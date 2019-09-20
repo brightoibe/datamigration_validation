@@ -66,6 +66,8 @@ public class CohortMaster {
 	public final static int DOCUMENTED_DOB_COHORT = 15;
 	
 	public final static int STARTED_ART_LAST_6MONTHS_DOCUMENTED_SEX = 16;
+        
+        public final static int STARTED_ART_LAST_6MONTHS_DOCUMENTED_DATECONFIRMED_POSITIVE=17;
 	
 	/*
 	   Concept IDs
@@ -433,8 +435,8 @@ public class CohortMaster {
 		//    endDateTime.toDate());
 		patientsWithDocumentedDateConfirmedPositiveCohort = buildCohortByConceptID(DATE_CONFIRMED_POSITIVE, startDateTime.toDate(), endDateTime.toDate());
 		answerSet = interset(newlyStartedARTLast6MonthsCohort, patientsWithDocumentedDateConfirmedPositiveCohort);
-		cohortDictionary.put(DOCUMENTED_SEX_COHORT, patientsWithDocumentedSexCohort);
-		cohortDictionary.put(STARTED_ART_LAST_6MONTHS_DOCUMENTED_SEX, answerSet);
+		cohortDictionary.put(DOCUMENTED_DIAGNOSIS_STATUS_COHORT, patientsWithDocumentedDateConfirmedPositiveCohort);
+		cohortDictionary.put(STARTED_ART_LAST_6MONTHS_DOCUMENTED_DATECONFIRMED_POSITIVE, answerSet);
 		
 	}
 	
