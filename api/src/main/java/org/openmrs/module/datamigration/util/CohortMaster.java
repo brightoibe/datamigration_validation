@@ -66,8 +66,8 @@ public class CohortMaster {
 	public final static int DOCUMENTED_DOB_COHORT = 15;
 	
 	public final static int STARTED_ART_LAST_6MONTHS_DOCUMENTED_SEX = 16;
-        
-        public final static int STARTED_ART_LAST_6MONTHS_DOCUMENTED_DATECONFIRMED_POSITIVE=17;
+	
+	public final static int STARTED_ART_LAST_6MONTHS_DOCUMENTED_DATECONFIRMED_POSITIVE = 17;
 	
 	/*
 	   Concept IDs
@@ -79,7 +79,8 @@ public class CohortMaster {
 	private final static int OCCUPATIONAL_STATUS_CONCEPT = 1542;
 	
 	private final static int ART_START_DATE_CONCEPT = 159599;
-        private final static int DATE_CONFIRMED_POSITIVE=160554;
+	
+	private final static int DATE_CONFIRMED_POSITIVE = 160554;
 	
 	private Map<Integer, String> indicatorNamesMap = new HashMap<Integer, String>();
 	
@@ -426,14 +427,15 @@ public class CohortMaster {
 		answerSet = interset(newlyStartedARTLast6MonthsCohort, patientsWithDocumentedSexCohort);
 		cohortDictionary.put(DOCUMENTED_SEX_COHORT, patientsWithDocumentedSexCohort);
 		cohortDictionary.put(STARTED_ART_LAST_6MONTHS_DOCUMENTED_SEX, answerSet);
-                
-                //Newly started on ART Last 6 Months with documented DateConfirmedPositive
+		
+		//Newly started on ART Last 6 Months with documented DateConfirmedPositive
 		endDateTime = new DateTime(new Date());
 		startDateTime = endDateTime.minusMonths(6);
 		Set<Integer> patientsWithDocumentedDateConfirmedPositiveCohort;
 		//newlyStartedARTLast6MonthsCohort = buildCohortByDateConcept(ART_START_DATE_CONCEPT, startDateTime.toDate(),
 		//    endDateTime.toDate());
-		patientsWithDocumentedDateConfirmedPositiveCohort = buildCohortByConceptID(DATE_CONFIRMED_POSITIVE, startDateTime.toDate(), endDateTime.toDate());
+		patientsWithDocumentedDateConfirmedPositiveCohort = buildCohortByConceptID(DATE_CONFIRMED_POSITIVE,
+		    startDateTime.toDate(), endDateTime.toDate());
 		answerSet = interset(newlyStartedARTLast6MonthsCohort, patientsWithDocumentedDateConfirmedPositiveCohort);
 		cohortDictionary.put(DOCUMENTED_DIAGNOSIS_STATUS_COHORT, patientsWithDocumentedDateConfirmedPositiveCohort);
 		cohortDictionary.put(STARTED_ART_LAST_6MONTHS_DOCUMENTED_DATECONFIRMED_POSITIVE, answerSet);
